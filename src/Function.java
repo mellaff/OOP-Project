@@ -1,23 +1,21 @@
-public class Function {
-    private String expression;
-    public Function(){
-    }
-    public Function(String expression){
+public abstract class Function {
+    public static final double PRECISION = 0.0000001;
+    public static final int MAX_ITERATIONS = 1000000;
+    private Expression expression;
+    public Function(Expression expression){
         setExpression(expression);
     }
-    public void setExpression(String expression) {
-        this.expression = expression.replace(" ", "");
+    protected void setExpression(Expression expression) {
+        this.expression = expression.clone();
     }
-    public String getExpression() {
-        return expression;
+    public Expression getExpression() {
+        return expression.clone();
     }
     public String toString(){
-        return expression;
+        return expression.toString();
     }
-    public boolean isSolvable(){
-        return true;
-    }
-    public double[] solve(){
-        return null;
-    }
+    public abstract boolean isSolvable();
+    protected abstract double[] solve();
+    protected abstract Function derivative();
+    public abstract double valueAt(double x);
 }
