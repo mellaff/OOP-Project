@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Polynomial extends Function implements Cloneable{
     private static final Polynomial MINUS_ONE = generateFromCoefficients(new double[] {-1.0});
+    private boolean isSimplified = false;
     public static final int HIGHEST_POSSIBLE_DEGREE = 100000;
     private double[] coefficients;
     private Polynomial derivative;
@@ -14,6 +15,13 @@ public class Polynomial extends Function implements Cloneable{
     public Polynomial(PolynomialExpression expression){
         super(expression);
         coefficients = expression.coefficientsOfPolynomialExpression();
+    }
+    public Expression getExpression() {
+        if(!isSimplified){
+            setExpression(PolynomialExpression.coefficientsToPolynomialExpression(coefficients));
+            isSimplified = true;
+        }
+        return super.getExpression();
     }
     public Polynomial clone(){
         try {

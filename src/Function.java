@@ -12,7 +12,7 @@ public abstract class Function {
         return expression.clone();
     }
     public String toString(){
-        return expression.toString();
+        return getExpression().toString();
     }
     public abstract boolean isSolvable();
     protected abstract double[] solve();
