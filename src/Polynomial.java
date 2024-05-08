@@ -245,6 +245,42 @@ public class Polynomial extends Function implements Cloneable{
         binarySearch(upperBound, second, arrayList);
     }
 
+    private double bisectionMethod(double a, double b)
+    {
+        int iterations = 0;
+        double c = a+b/2;
+        while(Math.abs(c) > PRECISION && iterations < MAX_ITERATIONS)
+        {
+            if((valueAt(c) > 0 && valueAt(a) < 0) || (valueAt(c) < 0 && valueAt(a) > 0))
+                c = (a+c)/2;
+            else if ((valueAt(c) > 0 && valueAt(b) < 0) || (valueAt(c) < 0 && valueAt(b) > 0))
+                c = (c+b)/2;
+
+            iterations++;
+
+        }
+
+        return valueAt(c);
+
+    }
+
+    public double[] solveByBisection()
+    {
+        int n = getNumberOfRoots();
+        double solutions[] = new double[n];
+        double bound = Math.pow(Double.MAX_VALUE, 1.0/getHighestDegree())/getCoefficients()[getHighestDegree()];
+        ArrayList<Double> intervals = new ArrayList<>(n+1);
+        binarySearch(-bound, bound, intervals);
+
+        for(int i=0; i<n; i++)
+            solutions[i] = bisectionMethod(intervals.get(i), intervals.get(i+1));
+
+
+        return solutions;
+
+    }
+
+
     protected double[] solve(){
         int n = getNumberOfRoots();
         int i = 0;
