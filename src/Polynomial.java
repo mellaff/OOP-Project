@@ -245,6 +245,8 @@ public class Polynomial extends Function implements Cloneable{
         binarySearch(upperBound, second, arrayList);
     }
 
+
+    //bisection method
     private double bisectionMethod(double a, double b)
     {
         int iterations = 0;
@@ -264,6 +266,8 @@ public class Polynomial extends Function implements Cloneable{
 
     }
 
+
+    //solver with Bisection method
     public double[] solveByBisection()
     {
         int n = getNumberOfRoots();
