@@ -1,3 +1,5 @@
+package core;
+
 public class Linear extends Polynomial{
     public Linear(PolynomialExpression equation){
         super(equation);

@@ -1,3 +1,5 @@
+package core;
+
 import java.util.HashMap;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -55,7 +57,7 @@ public class LinearExpression extends Expression{
         }
         return map;
     }
-    public static Expression coefficientsToLinearExpression(HashMap<Character, Double> coefficients){
+    public static LinearExpression coefficientsToLinearExpression(HashMap<Character, Double> coefficients){
         StringBuilder stringBuilder = new StringBuilder();
         Set<Character> set = coefficients.keySet();
         boolean first = true;

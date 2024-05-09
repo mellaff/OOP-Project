@@ -1,5 +1,5 @@
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+package core;
+
 import java.util.ArrayList;
 
 public class Polynomial extends Function implements Cloneable{
@@ -261,12 +261,9 @@ public class Polynomial extends Function implements Cloneable{
             iterations++;
 
         }
-
         return valueAt(c);
 
     }
-
-
     //solver with Bisection method
     public double[] solveByBisection()
     {

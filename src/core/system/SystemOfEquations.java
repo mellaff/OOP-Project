@@ -1,5 +1,6 @@
-package system;
+package core.system;
 
+import core.LinearExpression;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,7 +19,7 @@ public class SystemOfEquations {
         setMatrix();
     }
     public String toString(){
-        Expression[] equationArray = getEquations();
+        LinearExpression[] equationArray = getEquations();
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < equationArray.length; i++) {
             stringBuilder.append(equationArray[i]);
@@ -28,8 +29,8 @@ public class SystemOfEquations {
         }
         return stringBuilder.toString();
     }
-    public Expression[] getEquations() {
-        Expression[] copyEquations = new Expression[equations.length];
+    public LinearExpression[] getEquations() {
+        LinearExpression[] copyEquations = new LinearExpression[equations.length];
         if (!simplified){
             for (int i = 0; i < equations.length; i++) {
                 copyEquations[i] = LinearExpression.coefficientsToLinearExpression(coefficientsMap[i]);
@@ -38,7 +39,7 @@ public class SystemOfEquations {
         }
         else {
             for (int i = 0; i < equations.length; i++) {
-                copyEquations[i] = equations[i].clone();
+                copyEquations[i] = (LinearExpression)equations[i].clone();
             }
         }
         return copyEquations;

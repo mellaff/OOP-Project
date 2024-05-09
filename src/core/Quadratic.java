@@ -1,3 +1,5 @@
+package core;
+
 import static java.lang.Math.sqrt;
 
 public class Quadratic extends Polynomial{

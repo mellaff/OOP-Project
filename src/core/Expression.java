@@ -1,3 +1,5 @@
+package core;
+
 public abstract class Expression implements Cloneable{
     private final String expression;
     public Expression(String expression){

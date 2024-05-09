@@ -1,3 +1,6 @@
+import core.Polynomial;
+import core.PolynomialExpression;
+
 import java.util.Arrays;
 
 public class Main {
@@ -5,7 +8,13 @@ public class Main {
         PolynomialExpression expression = new PolynomialExpression("-2+x+x^2-x");
         //System.out.println(expression);
         Polynomial polynomial = new Polynomial(expression);
-        //System.out.println(Arrays.toString(polynomial.solve()));
-        System.out.println(polynomial);
+        double firstStart = System.nanoTime();
+        System.out.println(Arrays.toString(polynomial.getSolutions()));
+        double firstEnd = System.nanoTime();
+        double secondStart = System.nanoTime();
+        System.out.println(Arrays.toString(polynomial.solveByBisection()));
+        double secondEnd = System.nanoTime();
+        System.out.println(firstEnd - firstStart);
+        System.out.println(secondEnd - secondStart);
     }
 }

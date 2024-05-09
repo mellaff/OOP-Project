@@ -1,3 +1,5 @@
+package core;
+
 public abstract class Function {
     public static final double PRECISION = 0.0000001;
     public static final int MAX_ITERATIONS = 1000000;
