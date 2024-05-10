@@ -1,6 +1,8 @@
-package core;
+package core.function;
 
-public class Linear extends Polynomial{
+import core.expression.PolynomialExpression;
+
+public class Linear extends Polynomial {
     public Linear(PolynomialExpression equation){
         super(equation);
     }

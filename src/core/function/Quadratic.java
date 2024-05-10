@@ -1,4 +1,6 @@
-package core;
+package core.function;
+
+import core.expression.PolynomialExpression;
 
 import static java.lang.Math.sqrt;
 

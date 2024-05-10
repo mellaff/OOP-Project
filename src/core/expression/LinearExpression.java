@@ -1,10 +1,10 @@
-package core;
+package core.expression;
 
 import java.util.HashMap;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-public class LinearExpression extends Expression{
+public class LinearExpression extends Expression {
     public LinearExpression(String expression){
         super(expression);
     }
@@ -82,9 +82,8 @@ public class LinearExpression extends Expression{
         stringBuilder.append(coefficients.get('\0'));
         return new LinearExpression(stringBuilder.toString());
     }
-
-    public boolean isValid() {
+    public static boolean isValid(String expression) {
         String pattern = "^([+-]?(\\d*[a-zA-Z]|\\d+))([+-](\\d*[a-zA-Z]|\\d+))*(=[+-]?(\\d*[a-zA-Z]|\\d+))([+-](\\d*[a-zA-Z]|\\d+))*$";
-        return Pattern.matches(pattern, getExpression());
+        return Pattern.matches(pattern, expression);
     }
 }
