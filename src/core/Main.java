@@ -1,12 +1,6 @@
 package core;
-
 import core.expression.LinearExpression;
-import core.expression.PolynomialExpression;
-import core.function.Polynomial;
 import core.system.SystemOfEquations;
-import core.ui.PolynomialSolverUI;
-
-import javax.swing.*;
 import java.util.Arrays;
 
 public class Main {

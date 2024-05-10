@@ -267,13 +267,19 @@ public class Matrix implements Cloneable{
                         }
                         for (int k = j+1; k < solutions.length; k++) {
                             double currentCoefficient = -rref.getCoefficient(i, k);
+                            if (currentCoefficient == 0){
+                                continue;
+                            }
                             if (currentCoefficient > 0){
                                 stringBuilder.append("+");
                             }
-                            if (currentCoefficient != 0){
-                                stringBuilder.append(currentCoefficient);
-                                stringBuilder.append(listOfVariables.get(k));
+                            if(currentCoefficient == -1){
+                                stringBuilder.append("-");
                             }
+                            if (Math.abs(currentCoefficient) != 1){
+                                stringBuilder.append(currentCoefficient);
+                            }
+                            stringBuilder.append(listOfVariables.get(k));
                         }
                         if (stringBuilder.toString().equals(listOfVariables.get(i) + " = ")){
                             stringBuilder.append(0.0);
