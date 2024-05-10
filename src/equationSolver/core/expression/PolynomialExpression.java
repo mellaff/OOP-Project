@@ -1,6 +1,6 @@
-package core.expression;
+package equationSolver.core.expression;
 
-import core.function.Polynomial;
+import equationSolver.core.function.Polynomial;
 
 import java.util.regex.Pattern;
 

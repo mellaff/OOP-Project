@@ -1,4 +1,4 @@
-package core.expression;
+package equationSolver.core.expression;
 
 /**
  * An abstract class representing mathematical expressions.

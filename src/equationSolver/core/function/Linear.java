@@ -1,6 +1,6 @@
-package core.function;
+package equationSolver.core.function;
 
-import core.expression.PolynomialExpression;
+import equationSolver.core.expression.PolynomialExpression;
 
 public class Linear extends Polynomial {
     public Linear(PolynomialExpression equation){

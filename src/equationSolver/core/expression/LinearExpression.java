@@ -1,4 +1,4 @@
-package core.expression;
+package equationSolver.core.expression;
 
 import java.util.HashMap;
 import java.util.Set;

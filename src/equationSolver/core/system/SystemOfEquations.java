@@ -1,6 +1,6 @@
-package core.system;
+package equationSolver.core.system;
 
-import core.expression.LinearExpression;
+import equationSolver.core.expression.LinearExpression;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

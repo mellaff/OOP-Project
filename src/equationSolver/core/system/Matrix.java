@@ -1,4 +1,4 @@
-package core.system;
+package equationSolver.core.system;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package core.ui;
+package equationSolver.ui;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -6,13 +6,13 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import core.function.Point;
-import core.expression.Expression;
-import core.expression.LinearExpression;
-import core.expression.PolynomialExpression;
-import core.system.*;
-import core.exceptions.InvalidExpressionExceptions;
-import core.function.Polynomial;
+import equationSolver.core.function.Point;
+import equationSolver.core.expression.Expression;
+import equationSolver.core.expression.LinearExpression;
+import equationSolver.core.expression.PolynomialExpression;
+import equationSolver.core.system.*;
+import equationSolver.core.exceptions.InvalidExpressionExceptions;
+import equationSolver.core.function.Polynomial;
 
 /**
  * A graphical user interface for solving polynomial equations.

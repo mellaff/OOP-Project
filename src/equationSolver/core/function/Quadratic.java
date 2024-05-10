@@ -1,6 +1,6 @@
-package core.function;
+package equationSolver.core.function;
 
-import core.expression.PolynomialExpression;
+import equationSolver.core.expression.PolynomialExpression;
 
 import static java.lang.Math.sqrt;
 

@@ -1,4 +1,4 @@
-package core.function;
+package equationSolver.core.function;
 
 /**
  * Represents a point in a 2-dimensional coordinate system.

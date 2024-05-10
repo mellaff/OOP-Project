@@ -1,4 +1,4 @@
-package core.exceptions;
+package equationSolver.core.exceptions;
 
 /**
  * Exception thrown when an expression is invalid.

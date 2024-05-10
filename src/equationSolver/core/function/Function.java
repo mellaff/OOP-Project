@@ -1,6 +1,6 @@
-package core.function;
+package equationSolver.core.function;
 
-import core.expression.Expression;
+import equationSolver.core.expression.Expression;
 
 public abstract class Function {
     public static final double PRECISION = 0.0000001;

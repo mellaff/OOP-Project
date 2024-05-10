@@ -1,7 +1,7 @@
-package core.function;
+package equationSolver.core.function;
 
-import core.expression.Expression;
-import core.expression.PolynomialExpression;
+import equationSolver.core.expression.Expression;
+import equationSolver.core.expression.PolynomialExpression;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Represents a polynomial core.function.
+ * Represents a polynomial equationSolver.core.function.
  */
 public class Polynomial extends Function implements Cloneable {
 
